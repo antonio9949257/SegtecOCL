@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro - E-commerce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+
+<body>
+    <section class="vh-100" style="background-color: hsl(0, 0%, 96%)">
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-8">
+                    <div class="card shadow" style="border-radius: 10px;">
+                        <div class="card-body p-4">
+                            <div style="text-align:center;">
+                                <a href="../index.html">
+                                    <img src="../assets/images/logos/logo-white.png" alt="logo-white" class="logo" />
+                                </a>
+                            </div>
+                            <h3 class="mb-4 text-center poppins-extrabold">Formulario de Registro</h3>
+                            <form class="roboto-mono-cuatro" id="registerForm">
+                                <div class="form-row mb-3">
+                                    <div class="form-group col-md-6">
+                                        <label for="firstName">Nombre</label>
+                                        <input type="text" id="registerNombre" class="form-control"
+                                            placeholder="Introduce tu nombre" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="lastName">Apellido</label>
+                                        <input type="text" id="registerApellido" class="form-control"
+                                            placeholder="Introduce tu apellido" required>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="registerCorreo">Correo Electrónico</label>
+                                    <input type="email" id="registerCorreo" class="form-control"
+                                        placeholder="Introduce tu correo" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="registerTelefono">Número de Teléfono</label>
+                                    <input type="tel" id="registerTelefono" class="form-control"
+                                        placeholder="Introduce tu número de teléfono" required>
+                                </div>
+                                <div class="form-row mb-3">
+                                    <div class="form-group col-md-6">
+                                        <label for="password">Contraseña</label>
+                                        <input type="password" id="registerContrasena" class="form-control"
+                                            placeholder="Introduce tu contraseña" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="confirmPassword">Confirmar Contraseña</label>
+                                        <input type="password" id="confirmPassword" class="form-control"
+                                            placeholder="Confirma tu contraseña" required>
+                                    </div>
+                                </div>
+                                <div class="form-check mb-4">
+                                    <input type="checkbox" class="form-check-input" id="showPassword">
+                                    <label class="form-check-label" for="showPassword">Mostrar contraseñas</label>
+                                </div>
+                                <button type="submit" class="btn btn-block"
+                                    style="background-color: black; color: aliceblue; width: auto; margin: 0 auto;">Registrarse</button>
+                                <p class="text-center mt-3">¿Ya tienes una cuenta? <a href="./login.html">Inicia
+                                        sesión</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const passwordInput = document.getElementById('registerContrasena');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const showPasswordCheckbox = document.getElementById('showPassword');
+
+        showPasswordCheckbox.addEventListener('change', function () {
+            const type = this.checked ? 'text' : 'password';
+            passwordInput.type = type;
+            confirmPasswordInput.type = type;
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./register.js"></script>
+</body>
+
+</html>

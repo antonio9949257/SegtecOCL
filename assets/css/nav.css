@@ -1,0 +1,71 @@
+
+.navbar {
+    padding: 0 10px;
+    justify-content: center;
+}
+
+.navbar-custom {
+    color: black;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    padding: 0.75rem 1rem;
+}
+
+.nav-link:hover {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.logo-name {
+    width: 120px;
+    height: auto;
+}
+@media (max-width : 516px){
+    .logo {
+        display: none;
+        width: 40px;
+        height: auto;
+    }
+    
+    .logo-name {
+        
+        width: 100px;
+        height: auto;
+    }
+
+    #productCarousel{
+        display: none;
+    }
+
+    #bienvenida{
+        display: none;
+    }
+    #navbar-toogle{
+        padding-inline: 4px 4px;
+    }
+    #titulo{
+        width: 380px;
+        margin: 5px auto;
+
+    }
+    #descripcion{
+        width: 400px;
+        margin: 5px auto;
+    }
+}
+@media (max-width: 810px){
+    #iconos-nav{
+        display: none;
+    }
+}
