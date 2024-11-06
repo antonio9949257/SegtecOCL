@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-const API_URL = 'https://segteosv.onrender.com/auth/login'; 
+const API_URL = 'http://localhost:8080/auth/login'; 
 
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -24,6 +24,8 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
 
             localStorage.setItem('token', data.token);
             localStorage.setItem('NombreUsuario', data.nombre)
+            localStorage.setItem('rol', data.rol)
+
 
             window.location.href = '../index.html'; 
         } else {

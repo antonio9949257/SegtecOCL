@@ -12,16 +12,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/nav.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
 </head>
 
 <body>
 
-    <div class="alert alert-info d-flex align-items-center justify-content-center text-center mb-0" role="alert">
+    <div class="alert alert-info d-flex align-items-center justify-content-center text-center mb-0 " role="alert">
         ⚠️ <strong id="bienvenida">Bienvenido a nuestro Servicio de Soporte Técnico:</strong> Si necesitas ayuda, no
         dudes en contactarnos a través del formulario de soporte en nuestro sitio web.
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light poppins-semibold">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light poppins-semibold ">
         <div class="container d-flex justify-content-between align-items-center w-100">
             <a class="navbar-brand roboto-mono-unico text-light" href="#" onclick="loadPage('html/main.html')">
                 <img src="./assets/images/logos/logo-white.png" alt="logo-white" class="logo" />
@@ -46,12 +47,12 @@
             </div>
             <ul class="navbar-nav d-flex flex-row roboto-mono-siete">
                 <li class="nav-item me-2" id="login-nav-item">
-                    <a class="btn btn-primary" role="button" href="./auth/login.html">
+                    <a class="btn" style="background-color: #272626; color: rgb(218, 142, 44);" role="button" href="./auth/login.html">
                         <i class="fi fi-rr-circle-user"></i> Iniciar Sesión
                     </a>
                 </li>
                 <li class="nav-item me-2" id="user-nav-item" style="display: none;">
-                    <span class="btn btn-primary" id="user-name-btn"></span>
+                    <span class="btn" style="background-color: #222222; color: rgb(218, 142, 44);" id="user-name-btn"></span>
                 </li>
                 <li class="nav-item me-2" id="logout-btn" style="display: none;">
                     <a class="btn btn-outline-danger d-flex align-items-center" role="button" id="logout-button">
@@ -59,7 +60,7 @@
                     </a>
                 </li>
             </ul>
-            
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toogle">
                 <span class="navbar-toggler-icon"></span>
@@ -77,9 +78,7 @@
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#faq">Preguntas Frecuentes</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#contacto">Contáctanos</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#testimonios">Testimonios</a>
                     </li>
@@ -89,11 +88,16 @@
     </nav>
 
 
-    <header class="bg-primary text-white text-center py-5">
-        <h1 id="titulo">Bienvenido a nuestro Servicio de Soporte Técnico</h1>
-        <p id="descripcion">Soluciones rápidas y efectivas para tus instalaciones</p>
-        <a href="register.html" class="btn btn-light">Regístrate Ahora</a>
+    <header class="text-white text-center py-5" id="header">
+        <div class="container bg-semi-transparent p-4 rounded">
+            <h1 id="titulo" class=" poppins-bold"></h1>
+            <p id="descripcion" class="roboto-mono-cuatro text-dark"></p>
+            <div class="roboto-mono-siete">
+                <a href="#" id="solicitar-servicio-btn" class="btn" style="background-color: #222222; color: rgb(218, 142, 44);">Solicitar Servicio</a>
+            </div>
+        </div>
     </header>
+    
     <section class="container my-4 align-items-center justify-content-between text-center">
         <div id="productCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -131,7 +135,7 @@
     <section id="nuestrosServicios" class="py-5">
         <div class="container">
             <h2 class="text-center mb-4">Nuestros Servicios</h2>
-            <div class="row">
+            <div class="row roboto-mono-cuatro">
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <img src="./assets/images/services/alamarssensores.jpeg" class="card-img-top" alt="Servicio 1">
@@ -145,7 +149,7 @@
                                 <li><i class="fas fa-check-circle"></i> Soporte remoto y presencial.</li>
                                 <li><i class="fas fa-check-circle"></i> Asesoría personalizada.</li>
                             </ul>
-                            <a href="soporte.html" class="btn btn-primary">Más Información</a>
+                            <a href="soporte.html" class="btn" style="background-color: #222222; color: rgb(218, 142, 44);">Más Información</a>
                         </div>
                     </div>
                 </div>
@@ -162,13 +166,14 @@
                                 <li><i class="fas fa-check-circle"></i> Configuración de redes y Wi-Fi.</li>
                                 <li><i class="fas fa-check-circle"></i> Montaje de equipos de audio y video.</li>
                             </ul>
-                            <a href="instalaciones.html" class="btn btn-primary">Más Información</a>
+                            <a href="instalaciones.html" class="btn" style="background-color: #222222; color: rgb(218, 142, 44);">Más Información</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="./assets/images/services/softwaremonitoreo.jpeg" class="card-img-top" alt="Servicio 3">
+                        <img src="./assets/images/services/softwaremonitoreo.jpeg" class="card-img-top"
+                            alt="Servicio 3">
                         <div class="card-body">
                             <h5 class="card-title">Mantenimiento</h5>
                             <p class="card-text">Proporcionamos mantenimiento preventivo y correctivo para asegurar el
@@ -178,7 +183,7 @@
                                 <li><i class="fas fa-check-circle"></i> Actualizaciones de sistemas y programas.</li>
                                 <li><i class="fas fa-check-circle"></i> Limpieza y optimización de equipos.</li>
                             </ul>
-                            <a href="mantenimiento.html" class="btn btn-primary">Más Información</a>
+                            <a href="mantenimiento.html" class="btn" style="background-color: #222222; color: rgb(218, 142, 44);">Más Información</a>
                         </div>
                     </div>
                 </div>
@@ -188,7 +193,7 @@
     <section id="faq" class="py-5">
         <div class="container">
             <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
-            <div class="accordion" id="faqAccordion">
+            <div class="accordion roboto-mono-cuatro" id="faqAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -236,9 +241,9 @@
             </div>
         </div>
     </section>
-    <section id="testimonios" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Testimonios de Clientes</h2>
+    <section id="testimonios" class="py-5 bg-dark">
+        <div class="container ">
+            <h2 class="text-center mb-4 text-light roboto-mono-cuatro">Testimonios de Clientes</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4">
@@ -267,29 +272,8 @@
             </div>
         </div>
     </section>
-    <section id="contacto" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contáctanos</h2>
-            <form>
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" required>
-                </div>
-                <div class="mb-3">
-                    <label for="correo" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="correo" required>
-                </div>
-                <div class="mb-3">
-                    <label for="mensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
-
-
-    <footer class="bg-light text-center py-4">
+   
+    <footer class="bg-nav text-center py-4">
         <div class="social-icons mb-3">
             <a href="https://www.facebook.com/tu-pagina" target="_blank" class="text-dark me-3">
                 <i class="fab fa-facebook fa-2x"></i>
@@ -307,15 +291,14 @@
                 <i class="fab fa-tiktok fa-2x"></i>
             </a>
         </div>
-        <p>&copy; 2024 Tienda en Línea. Todos los derechos reservados.</p>
-        <a href="/terminos" class="btn btn-link">Términos y Condiciones</a>
-        <a href="/politica" class="btn btn-link">Política de Privacidad</a>
+        <p>&copy; 2024 Servicio Tecnico. Todos los derechos reservados.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/nav.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

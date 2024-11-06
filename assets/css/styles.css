@@ -134,3 +134,82 @@
     font-weight: 700;
     font-style: normal;
 }
+
+body {
+    background: radial-gradient(circle, 
+    rgba(255, 255, 255, 1) 20%,  /* Blanco central */
+    rgba(255, 239, 185, 0.6) 30%, /* Crema suave */
+    rgba(144, 238, 144, 0.4) 40%, /* Verde suave */
+    rgba(186, 85, 211, 0.3) 50%, /* Púrpura suave */
+    rgba(255, 255, 204, 0.3) 60%, /* Amarillo suave */
+    rgba(255, 222, 173, 0.4) 80%); /* Crema pálido */
+    background-size: 300% 300%;
+    animation: gradientAnimation 20s ease-in-out infinite;
+    height: 100vh;
+    margin: 0;
+    transition: background 1s ease-in-out;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 100% 100%; }
+    50% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+
+
+
+.bg-semi-transparent {
+    background-color: rgba(167, 164, 164, 0.555); /* Fondo blanco semi-transparente */
+    border-radius: 50px; /* Esquinas redondeadas */
+}
+
+.container {
+    max-width: 960px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado */
+}
+
+.bg-nav {
+    background: radial-gradient(circle, 
+        rgba(255, 255, 255, 1) 20%,       /* Blanco central */
+        rgba(255, 239, 185, 0.6) 35%,     /* Crema suave */
+        rgba(144, 238, 144, 0.5) 50%,     /* Verde suave */
+        rgba(186, 85, 211, 0.4) 65%,      /* Púrpura suave */
+        rgba(255, 255, 204, 0.3) 80%,     /* Amarillo suave */
+        rgba(255, 222, 173, 0.3) 100%); 
+}
+
+.bg-semi-transparent {
+    background-color: rgba(255, 255, 255, 0.568); /* Fondo semi-transparente */
+    border-radius: 15px;
+}
+
+.highlight-name {
+    color: #ff7f50; /* Color personalizado para el nombre */
+    font-weight: bold;
+}
+@keyframes colorFlow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 182, 193, 1), 0 0 20px rgba(255, 182, 193, 0.7), 0 0 30px rgba(255, 182, 193, 0.5); /* Rosa claro */
+    }
+    25% {
+        text-shadow: 0 0 10px rgba(255, 228, 181, 1), 0 0 20px rgba(255, 228, 181, 0.7), 0 0 30px rgba(255, 228, 181, 0.5); /* Amarillo pastel */
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(186, 223, 255, 1), 0 0 20px rgba(186, 223, 255, 0.7), 0 0 30px rgba(186, 223, 255, 0.5); /* Azul pastel */
+    }
+    75% {
+        text-shadow: 0 0 10px rgba(192, 255, 192, 1), 0 0 20px rgba(192, 255, 192, 0.7), 0 0 30px rgba(192, 255, 192, 0.5); /* Verde claro */
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 204, 255, 1), 0 0 20px rgba(255, 204, 255, 0.7), 0 0 30px rgba(255, 204, 255, 0.5); /* Lavanda */
+    }
+}
+
+
+/* Aplicar animación al título */
+#titulo {
+
+    color: rgba(0, 0, 0, 0.986);
+    animation: colorFlow 5s ease infinite; /* Aplica la animación de gradiente */
+}

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-const API_URL = 'https://segteosv.onrender.com/auth/register/cliente'; 
+const API_URL = 'http://localhost:8080/auth/register/cliente'; 
 
 document.getElementById('registerForm').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -10,6 +10,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     const telefono = document.getElementById('registerTelefono').value;
     const contraseña = document.getElementById('registerContrasena').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
+    const rol = 'user';
 
     if (contraseña !== confirmPassword) {
         alert('Las contraseñas no coinciden.');
@@ -28,6 +29,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
                 correo,
                 telefono,
                 contraseña,
+                rol,
             }),
         });
 
