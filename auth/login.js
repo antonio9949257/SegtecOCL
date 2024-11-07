@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-const API_URL = 'http://localhost:8080/auth/login'; 
+const API_URL = 'https://segtegosv.onrender.com/auth/login'; 
 
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
     e.preventDefault();
