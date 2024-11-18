@@ -7,7 +7,7 @@
 1. **Clonar o descargar el repositorio en un zip y descomprimirlo en tu máquina:**
     
     ```bash
-    git clone 
+    git clone git@github.com:antonio9949257/SegtecOCL.git
     
     ```
     
